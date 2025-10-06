@@ -3,6 +3,8 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net6.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
+	<ApplicationIcon>Resources\ColorPickerLite.ico</ApplicationIcon>
+	<Version>1.0.0</Version>
   </PropertyGroup>
   <ItemGroup>
     <None Remove="Resources\ColorPickerLite.ico" />
