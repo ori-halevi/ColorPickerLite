@@ -4,7 +4,7 @@
 
 ![ColorPickerLite Logo](Resources/ColorPickerLite.png)
 
-**כלי פשוט ואלגנטי לבחירת צבעים מהמסך**
+**A simple and elegant tool for picking colors from your screen**
 
 [![WPF](https://img.shields.io/badge/WPF-.NET-blue)](https://github.com/ori-halevi/ColorPickerLite)
 [![Prism](https://img.shields.io/badge/Framework-Prism-purple)](https://prismlibrary.com/)
@@ -14,94 +14,94 @@
 
 ---
 
-## 📋 תיאור
+## 📋 Description
 
-ColorPickerLite הוא אפליקציית WPF קלת משקל ואינטואיטיבית המאפשרת לך לבחור צבעים מכל מקום על המסך בקלות. האפליקציה מציגה את הצבע בזמן אמת ומאפשרת העתקה מהירה של קודי צבע ב-RGB ו-HEX.
+ColorPickerLite is a lightweight and intuitive WPF application that allows you to pick colors from anywhere on your screen with ease. The application displays colors in real-time and enables quick copying of color codes in both RGB and HEX formats.
 
-### ✨ תכונות עיקריות
+### ✨ Key Features
 
-- 🖱️ **בחירה בזמן אמת** - ראה את הצבע מתחת לעכבר בזמן אמת
-- 🎯 **לחיצה לבחירה** - לחץ כדי לשמור את הצבע הנבחר
-- 📋 **העתקה מהירה** - העתק קודי RGB או HEX בלחיצה אחת
-- 🔄 **איפוס פשוט** - אפס את הבחירה בכפתור ייעודי
-- 🎨 **ממשק מודרני** - עיצוב אפל ואלגנטי עם אפקטים ויזואליים
-- 🚀 **קל משקל** - צריכת משאבים מינימלית
-
----
-
-## 🖼️ צילומי מסך
-
-![ColorPickerLite Interface](Resources/ColorPickerLite.png)
+- 🖱️ **Real-time Selection** - See the color under your mouse cursor in real-time
+- 🎯 **Click to Select** - Click to save the selected color
+- 📋 **Quick Copy** - Copy RGB or HEX codes with a single click
+- 🔄 **Simple Reset** - Reset your selection with a dedicated button
+- 🎨 **Modern Interface** - Dark and elegant design with visual effects
+- 🚀 **Lightweight** - Minimal resource consumption
 
 ---
 
-## 🚀 התחלה מהירה
+## 🖼️ Screenshots
 
-### דרישות מערכת
+![ColorPickerLite Interface](Resources/Preview.png)
+
+---
+
+## 🚀 Quick Start
+
+### System Requirements
 
 - Windows 10/11
-- .NET Framework 4.7.2 ומעלה (או .NET Core/NET 5+)
+- .NET Framework 4.7.2 or higher (or .NET Core/NET 5+)
 
-### התקנה
+### Installation
 
-1. הורד את הגרסה האחרונה מ[Releases](https://github.com/ori-halevi/ColorPickerLite/releases)
-2. חלץ את הקבצים לתיקייה
-3. הרץ את `ColorPickerLite.exe`
+1. Download the latest version from [Releases](https://github.com/ori-halevi/ColorPickerLite/releases)
+2. Extract the files to a folder
+3. Run `ColorPickerLite.exe`
 
-### שימוש
+### Usage
 
-1. **הפעל את האפליקציה** - האפליקציה תתחיל להאזין לתנועות העכבר
-2. **הזז את העכבר** - ראה את הצבע מתחת לעכבר בחלון "Live color"
-3. **לחץ לבחירה** - לחץ עם כפתור שמאלי כדי לבחור את הצבע
-4. **העתק את הקוד** - לחץ על "Copy" ליד RGB או HEX להעתקה ישירה ללוח
-5. **איפוס** - לחץ על הכפתור האדום לאיפוס הבחירה
+1. **Launch the application** - The app will start listening to mouse movements
+2. **Move your mouse** - See the color under your cursor in the "Live color" window
+3. **Click to select** - Left-click to select the color
+4. **Copy the code** - Click "Copy" next to RGB or HEX for direct clipboard copy
+5. **Reset** - Click the red button to reset the selection
 
 ---
 
-## 🏗️ מבנה הפרויקט
+## 🏗️ Project Structure
 
 ```
 ColorPickerLite/
 ├── Views/
-│   └── MainWindow.xaml          # ממשק המשתמש הראשי
+│   └── MainWindow.xaml          # Main user interface
 ├── ViewModels/
-│   └── MainWindowViewModel.cs   # לוגיקת התצוגה
+│   └── MainWindowViewModel.cs   # View logic
 ├── Services/
-│   └── ColorPickerService/      # שירות לכידת צבעים
-├── Converters/                  # ממירים ל-XAML
-├── Resources/                   # תמונות ואייקונים
+│   └── ColorPickerService/      # Color capture service
+├── Converters/                  # XAML converters
+├── Resources/                   # Images and icons
 └── README.md
 ```
 
 ---
 
-## 🛠️ טכנולוגיות
+## 🛠️ Technologies
 
-- **WPF (Windows Presentation Foundation)** - מסגרת UI
-- **Prism Library** - MVVM ו-Dependency Injection
-- **Gma.System.MouseKeyHook** - האזנה לאירועי עכבר גלובליים
-- **System.Drawing** - לכידת פיקסלים מהמסך
+- **WPF (Windows Presentation Foundation)** - UI framework
+- **Prism Library** - MVVM and Dependency Injection
+- **Gma.System.MouseKeyHook** - Global mouse event listener
+- **System.Drawing** - Screen pixel capture
 
 ---
 
-## 🎯 תכונות מתקדמות
+## 🎯 Advanced Features
 
-### לכידת צבעים גלובלית
-האפליקציה משתמשת ב-Global Mouse Hooks כדי לעקוב אחר העכבר בכל רחבי המסך, לא רק בתוך חלון האפליקציה.
+### Global Color Capture
+The application uses Global Mouse Hooks to track the mouse across the entire screen, not just within the application window.
 
-### המרת צבעים
-תמיכה בשני פורמטים פופולריים:
+### Color Conversion
+Support for two popular formats:
 - **RGB** - `R: 255, G: 165, B: 0`
 - **HEX** - `#FFA500`
 
 ### Easter Egg 🥚
-נסה ללחוץ לחיצה ימנית על הצבע הנבחר... 😉
+Try right-clicking on the selected color... 😉
 
 ---
 
-## 📝 קוד לדוגמה
+## 📝 Code Example
 
-השירות לכידת צבעים:
+The color capture service:
 
 ```csharp
 public class ColorPickerService : IColorPickerService
@@ -131,44 +131,44 @@ public class ColorPickerService : IColorPickerService
 
 ---
 
-## 🤝 תרומה לפרויקט
+## 🤝 Contributing
 
-תרומות תמיד מתקבלות בברכה! 
+Contributions are always welcome!
 
-1. Fork את הפרויקט
-2. צור Branch חדש (`git checkout -b feature/AmazingFeature`)
-3. Commit את השינויים (`git commit -m 'Add some AmazingFeature'`)
-4. Push ל-Branch (`git push origin feature/AmazingFeature`)
-5. פתח Pull Request
-
----
-
-## 📄 רישיון
-
-הפרויקט מופץ תחת רישיון MIT. ראה `LICENSE` לפרטים נוספים.
+1. Fork the project
+2. Create a new branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 ---
 
-## 📧 יצירת קשר
+## 📄 License
 
-שם שלך - [@yourhandle](https://twitter.com/yourhandle)
-
-קישור לפרויקט: [https://github.com/ori-halevi/ColorPickerLite](https://github.com/ori-halevi/ColorPickerLite)
+This project is distributed under the MIT License. See `LICENSE` for more details.
 
 ---
 
-## 🙏 הוקרות
+## 📧 Contact
 
-- [Prism Library](https://prismlibrary.com/) - מסגרת MVVM מצוינת
-- [MouseKeyHook](https://github.com/gmamaladze/globalmousekeyhook) - ספריית האזנה לאירועים גלובליים
-- [SVG Repo](https://www.svgrepo.com/) - אייקונים חינמיים
+Ori Halevi - [@Oh_tech](https://t.me/Oh_tech)
+
+Project Link: [https://github.com/ori-halevi/ColorPickerLite](https://github.com/ori-halevi/ColorPickerLite)
+
+---
+
+## 🙏 Acknowledgments
+
+- [Prism Library](https://prismlibrary.com/) - Excellent MVVM framework
+- [MouseKeyHook](https://github.com/gmamaladze/globalmousekeyhook) - Global event listener library
+- [SVG Repo](https://www.svgrepo.com/) - Free icons
 
 ---
 
 <div align="center">
 
-**נהנית מ-ColorPickerLite? תן לנו ⭐ ב-GitHub!**
+**Enjoying ColorPickerLite? Give us a ⭐ on GitHub!**
 
-Made with ❤️ by [Your Name]
+Made with ❤️ by Ori Halevi
 
 </div>
