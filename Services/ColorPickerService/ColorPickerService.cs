@@ -12,7 +12,8 @@ namespace ColorPickerLite.Services.ColorPickerService
         {
             StartListening();
         }
-
+        private System.Windows.Forms.Timer _timer;
+        private Point _lastMouseLocation;
         public event EventHandler<ColorPickedEventArgs> ColorPicked;
 
         public void StartListening()
@@ -32,10 +33,28 @@ namespace ColorPickerLite.Services.ColorPickerService
                 _hook = null;
             }
         }
-
         private void OnMouseMove(object s, MouseEventArgs e)
         {
-            var color = GetColorAtPoint(e.Location);
+            _lastMouseLocation = e.Location;
+
+            if (_timer == null)
+            {
+                _timer = new System.Windows.Forms.Timer();
+                _timer.Interval = 300; // 1 שניה
+                _timer.Tick += Timer_Tick;
+                _timer.Start();
+            }
+            else
+            {
+                _timer.Stop();  // מאפס את הטיימר כל תזוזה
+                _timer.Start();
+            }
+        }
+
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            _timer.Stop();  // עצירת הטיימר עד לתזוזה הבאה
+            var color = GetColorAtPoint(_lastMouseLocation);
             ColorPicked?.Invoke(this, new ColorPickedEventArgs(color, false));
         }
 
